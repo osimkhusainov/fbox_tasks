@@ -1,0 +1,194 @@
+.food {
+    padding: 47px 80px 67px 80px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 100;
+    color: #ffffff;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    margin-top: 40px;
+    position: relative;
+    width: 320px;
+    height: 480px;
+    clip-path: polygon(10% 0, 100% 0, 100% 5%, 100% 100%, 80% 100%, 0 100%, 0% 80%, 0 5%);
+    border-radius: 10px;
+    border: 4px solid $main-color;
+    background: url(../img/cat.png) #f2f2f2 no-repeat;
+    background-position: bottom;
+    cursor: pointer;
+    &::before{
+        display: block;
+        z-index: 2;
+        transform-origin: 22% 200%;
+        -webkit-transform: rotate(-37deg);
+        -ms-transform: rotate(-37deg);
+        transform: rotate(-37deg);
+        content: '';
+        width: 100px;
+        border: 4px solid $main-color;
+    }
+    &__descr {
+        margin-left: 40px;
+    }
+    &__cansel {
+        display: none;
+        font-family: TrebuchetMS;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $active-color;
+    }
+    &__label {
+        font-family: TrebuchetMS;
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 400;
+        color: #666666;
+    }
+    &__title {
+        font-family: TrebuchetMS;
+        font-size: 48px;
+        margin-top: 10px;
+        font-weight: 700;
+        color: #000000;
+    }
+    &__subtitle {
+        font-family: TrebuchetMS;
+        font-size: 24px;
+        // margin-top: 3px;
+        font-weight: 700;
+        color: #000000;
+    }
+    &__specs {
+        font-family: TrebuchetMS;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #666666;
+        &-num {
+            font-family: TrebuchetMS;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 700;
+            color: #666666;
+        }
+    }
+    &__weight {
+        padding-top: 14px;
+        width: 80px;
+        height: 80px;
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 42px;
+        text-align: center;
+        color: #fff;
+        background-color: $main-color;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        &-count {
+            font-family: TrebuchetMS;
+            margin-top:7px;
+            font-size: 42px;
+            line-height: 22px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+        &-subcount {
+            font-family: TrebuchetMS;
+            margin-top: 7px;
+            font-size: 21px;
+            line-height: 22px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+    }
+}
+.product {
+    &__tabs {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
+.info {
+    margin-top: 15px;
+    &__buy {
+        text-align: center;
+        font-family: TrebuchetMS;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        &-link {
+            font-weight: bold;
+            font-size: 13px;
+            text-decoration: none;
+            color: $main-color;
+            border-bottom: 1px dashed $main-color;
+        }
+    }
+    &__descr {
+        display: none;
+        text-align: center;
+        font-family: TrebuchetMS;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    &__error {
+        display: none;
+        text-align: center;
+        font-family: TrebuchetMS;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #ffffff;
+        color: #ff6;
+    }
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.card-active {
+    border: 4px solid $active-color;
+    &::before{
+        border: 4px solid $active-color;
+    }
+}
+
+.card.card-active .card__weight {
+    background-color: $active-color;
+}
+.close {
+    border: 4px solid #b3b3b3;
+    cursor: default;
+    &::before{
+        border: 4px solid  #b3b3b3;
+    }
+}
+.close.card-active::after {
+    position: absolute;
+    content: '';
+    left:0; top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 242, 242, 0.5);
+}
+#close.close .card__weight{
+    background-color: #b3b3b3;  
+}
+
+
+

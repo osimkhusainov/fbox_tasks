@@ -1,0 +1,18 @@
+@import 'base/variable';
+
+* {
+    font-family: 'Exo 2', 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+}
+
+body {
+    background: url(../img/layers.png);
+    margin: 0;
+}
+
+@import 'blocks/cards';
