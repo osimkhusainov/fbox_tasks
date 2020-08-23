@@ -1,0 +1,59 @@
+@media (max-width: 1200px) {
+    .food {
+        padding: 0 10px 50px;
+    }
+    .product{
+        &__tabs {
+            margin: 0 15px;
+        }
+    }
+    .card {
+        width: 300px;
+        margin: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .product{
+        &__tabs {
+            margin: 0 20px;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card:last-child{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .product{
+        &__tabs {
+            margin: 0 50px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .product{
+        &__tabs {
+            margin: 0 5px;
+        }
+    }
+    h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 320px) {
+    .card {
+        width: 270px;
+        height: 400px;
+        margin: 0;
+        background-size: contain;
+        &:before {
+            transform-origin: 20% 300%;
+        }
+        &__descr {
+            margin-left: 15px;
+        }
+    }
+}

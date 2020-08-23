@@ -7,7 +7,7 @@
 
 .container {
     position: relative;
-    margin: auto;
+    margin: 0;
 }
 
 body {
@@ -16,3 +16,4 @@ body {
 }
 
 @import 'blocks/cards';
+@import 'blocks/media';
